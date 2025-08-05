@@ -1,0 +1,190 @@
+{
+  "blockchain_manager_access": {
+    "master_admin": {
+      "code": "CLI256-MASTER-ADMIN-2024",
+      "level": "master",
+      "permissions": ["*"],
+      "description": "Master administrator with unlimited access",
+      "expires": "2030-12-31",
+      "created": "2024-01-01",
+      "restrictions": "none",
+      "special_functions": [
+        "hard_fork_control",
+        "genesis_modification",
+        "protocol_upgrade",
+        "emergency_protocol_change"
+      ]
+    },
+    "blockchain_architect": {
+      "code": "CLI256-BLOCKCHAIN-ARCH-8888",
+      "level": "architect", 
+      "permissions": [
+        "protocol_design",
+        "consensus_modification",
+        "core_development",
+        "architecture_control",
+        "advanced_configuration"
+      ],
+      "description": "Blockchain architecture specialist",
+      "expires": "2025-12-31",
+      "created": "2024-01-01"
+    },
+    "defi_manager": {
+      "code": "CLI256-DEFI-MGR-6666",
+      "level": "defi_admin",
+      "permissions": [
+        "liquidity_management",
+        "yield_farming_control",
+        "staking_pools",
+        "defi_protocols",
+        "treasury_management"
+      ],
+      "description": "DeFi protocols and treasury management",
+      "expires": "2025-10-31",
+      "created": "2024-01-01"
+    },
+    "governance_admin": {
+      "code": "CLI256-GOVERNANCE-ADMIN-7777",
+      "level": "governance",
+      "permissions": [
+        "proposal_management",
+        "voting_control",
+        "dao_operations",
+        "community_governance",
+        "referendum_control"
+      ],
+      "description": "Governance and DAO administration",
+      "expires": "2025-11-30",
+      "created": "2024-01-01"
+    },
+    "treasury_controller": {
+      "code": "CLI256-TREASURY-CTRL-5555",
+      "level": "treasury",
+      "permissions": [
+        "treasury_operations",
+        "fund_allocation",
+        "budget_control",
+        "financial_management",
+        "reserve_management"
+      ],
+      "description": "Treasury and financial operations",
+      "expires": "2025-12-31",
+      "created": "2024-01-01"
+    }
+  },
+  "special_operations": {
+    "network_upgrade": {
+      "code": "CLI256-UPGRADE-PROTOCOL-2024",
+      "type": "one_time_use",
+      "permissions": ["protocol_upgrade"],
+      "expires": "2024-12-31",
+      "description": "Network protocol upgrade authorization"
+    },
+    "emergency_migration": {
+      "code": "CLI256-EMERGENCY-MIGRATE-2024", 
+      "type": "emergency_only",
+      "permissions": ["emergency_migration"],
+      "expires": "2025-01-31",
+      "description": "Emergency blockchain migration"
+    },
+    "genesis_reset": {
+      "code": "CLI256-GENESIS-RESET-2024",
+      "type": "critical_operation",
+      "permissions": ["genesis_modification"],
+      "expires": "2024-12-31",
+      "description": "Genesis block reset authorization"
+    }
+  },
+  "access_matrix": {
+    "network_overview": {
+      "required_level": "operator",
+      "permissions": ["blockchain_read", "node_monitoring"]
+    },
+    "node_status": {
+      "required_level": "operator", 
+      "permissions": ["node_monitoring", "status_checks"]
+    },
+    "transactions": {
+      "required_level": "senior",
+      "permissions": ["transaction_monitoring", "blockchain_read"]
+    },
+    "smart_contracts": {
+      "required_level": "senior",
+      "permissions": ["smart_contract_read", "contract_monitoring"]
+    },
+    "token_distribution": {
+      "required_level": "token_admin",
+      "permissions": ["token_operations", "distribution_control"]
+    },
+    "validator_management": {
+      "required_level": "validator_admin", 
+      "permissions": ["validator_control", "stake_management"]
+    },
+    "network_config": {
+      "required_level": "network_admin",
+      "permissions": ["network_config_read", "system_configuration"]
+    },
+    "deployment": {
+      "required_level": "admin",
+      "permissions": ["network_deployment", "infrastructure_control"]
+    },
+    "mint_tokens": {
+      "required_level": "token_admin",
+      "permissions": ["mint_tokens", "token_management"]
+    },
+    "freeze_account": {
+      "required_level": "security",
+      "permissions": ["freeze_accounts", "security_operations"]
+    },
+    "update_config": {
+      "required_level": "admin",
+      "permissions": ["system_configuration", "network_config_write"]
+    },
+    "export_data": {
+      "required_level": "senior",
+      "permissions": ["export_data", "blockchain_read"]
+    }
+  },
+  "audit_log": {
+    "enabled": true,
+    "log_level": "detailed",
+    "retention_days": 365,
+    "real_time_alerts": true,
+    "webhook_notifications": true,
+    "security_events": [
+      "invalid_access_attempt",
+      "privilege_escalation",
+      "emergency_function_used",
+      "configuration_changed",
+      "token_minted",
+      "account_frozen",
+      "validator_added_removed",
+      "network_stopped_started"
+    ]
+  },
+  "rate_limiting": {
+    "enabled": true,
+    "requests_per_minute": {
+      "master": 1000,
+      "admin": 500,
+      "emergency": 500,
+      "security": 200,
+      "token_admin": 200,
+      "validator_admin": 200,
+      "network_admin": 200,
+      "senior": 100,
+      "operator": 50
+    },
+    "concurrent_sessions": {
+      "master": 10,
+      "admin": 5,
+      "emergency": 3,
+      "security": 3,
+      "token_admin": 3,
+      "validator_admin": 3,
+      "network_admin": 3,
+      "senior": 2,
+      "operator": 1
+    }
+  }
+}

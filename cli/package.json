@@ -1,0 +1,41 @@
+{
+  "name": "cli256-blockchain-cli",
+  "version": "1.0.0",
+  "description": "CLI256 Blockchain Command Line Tools",
+  "main": "index.js",
+  "bin": {
+    "cli256-node": "./cli256-node.js",
+    "cli256-wallet": "./cli256-wallet.js"
+  },
+  "scripts": {
+    "install-global": "npm install -g .",
+    "setup": "chmod +x cli256-node.js && chmod +x cli256-wallet.js",
+    "test-node": "./cli256-node.js --help",
+    "test-wallet": "./cli256-wallet.js --help",
+    "demo": "node demo.js"
+  },
+  "dependencies": {
+    "commander": "^9.4.1",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "inquirer": "^8.2.5",
+    "qrcode": "^1.5.3"
+  },
+  "keywords": [
+    "blockchain",
+    "cli256",
+    "cryptocurrency",
+    "cli",
+    "wallet",
+    "node"
+  ],
+  "author": "CLI256 Development Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cli256/blockchain"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

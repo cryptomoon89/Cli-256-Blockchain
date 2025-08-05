@@ -1,0 +1,212 @@
+{
+  "access_codes": {
+    "primary_dev": {
+      "code": "CLI256-PRIME-DEV-2024",
+      "level": "admin",
+      "permissions": [
+        "blockchain_control",
+        "token_management", 
+        "validator_control",
+        "emergency_functions",
+        "system_configuration",
+        "network_deployment",
+        "smart_contract_deploy",
+        "authority_operations",
+        "mint_tokens",
+        "freeze_accounts",
+        "update_network_config",
+        "export_all_data",
+        "emergency_stop",
+        "restart_network",
+        "full_system_access"
+      ],
+      "expires": "2025-12-31",
+      "created": "2024-01-01",
+      "description": "Full administrative access to all blockchain management functions"
+    },
+    "senior_dev": {
+      "code": "CLI256-SENIOR-ACCESS-7891",
+      "level": "senior",
+      "permissions": [
+        "blockchain_monitoring",
+        "token_operations",
+        "validator_monitoring",
+        "system_maintenance",
+        "network_config_read",
+        "transaction_monitoring",
+        "export_data",
+        "validator_management",
+        "node_status_control"
+      ],
+      "expires": "2025-06-30",
+      "created": "2024-01-01",
+      "description": "Senior developer access for operations and monitoring"
+    },
+    "security_admin": {
+      "code": "CLI256-SEC-ADMIN-4567",
+      "level": "security",
+      "permissions": [
+        "freeze_accounts",
+        "unfreeze_accounts",
+        "security_monitoring",
+        "audit_logs",
+        "emergency_functions",
+        "validator_slashing",
+        "network_security",
+        "access_control"
+      ],
+      "expires": "2025-12-31",
+      "created": "2024-01-01",
+      "description": "Security administrator for account and network security"
+    },
+    "system_operator": {
+      "code": "CLI256-SYS-OPS-1234",
+      "level": "operator",
+      "permissions": [
+        "node_monitoring",
+        "basic_operations",
+        "status_checks",
+        "performance_monitoring",
+        "log_access",
+        "basic_troubleshooting"
+      ],
+      "expires": "2025-03-31",
+      "created": "2024-01-01",
+      "description": "System operator for basic monitoring and operations"
+    },
+    "emergency_access": {
+      "code": "CLI256-EMERGENCY-OVERRIDE-9999",
+      "level": "emergency",
+      "permissions": [
+        "emergency_stop",
+        "network_pause",
+        "security_lockdown",
+        "full_system_access",
+        "override_all_restrictions",
+        "emergency_recovery",
+        "crisis_management",
+        "immediate_action_authority"
+      ],
+      "expires": "2026-12-31",
+      "created": "2024-01-01",
+      "description": "Emergency access for crisis situations and immediate response"
+    },
+    "token_manager": {
+      "code": "CLI256-TOKEN-MGR-5678",
+      "level": "token_admin",
+      "permissions": [
+        "mint_tokens",
+        "burn_tokens",
+        "token_distribution",
+        "allocation_management",
+        "vesting_control",
+        "token_operations",
+        "supply_management"
+      ],
+      "expires": "2025-09-30",
+      "created": "2024-01-01",
+      "description": "Token management specialist for CLI256 token operations"
+    },
+    "validator_admin": {
+      "code": "CLI256-VALIDATOR-ADMIN-3456",
+      "level": "validator_admin",
+      "permissions": [
+        "validator_control",
+        "add_validators",
+        "remove_validators",
+        "validator_slashing",
+        "stake_management",
+        "commission_control",
+        "validator_monitoring"
+      ],
+      "expires": "2025-08-31",
+      "created": "2024-01-01",
+      "description": "Validator network administrator"
+    },
+    "network_engineer": {
+      "code": "CLI256-NET-ENG-7890",
+      "level": "network_admin",
+      "permissions": [
+        "network_config_read",
+        "network_config_write",
+        "deployment_management",
+        "infrastructure_control",
+        "performance_tuning",
+        "network_optimization"
+      ],
+      "expires": "2025-07-31",
+      "created": "2024-01-01",
+      "description": "Network infrastructure engineer"
+    }
+  },
+  "security_settings": {
+    "max_attempts": 3,
+    "lockout_duration": 3600,
+    "require_2fa": true,
+    "log_all_access": true,
+    "notification_webhook": "https://api.cli256.dev/security/access-alerts",
+    "session_timeout": 7200,
+    "auto_logout_idle": 1800,
+    "ip_whitelist_enabled": false,
+    "audit_retention_days": 365
+  },
+  "access_levels": {
+    "admin": {
+      "description": "Full administrative access",
+      "color": "#ef4444",
+      "priority": 10
+    },
+    "emergency": {
+      "description": "Emergency crisis management",
+      "color": "#dc2626",
+      "priority": 9
+    },
+    "security": {
+      "description": "Security administration",
+      "color": "#f59e0b",
+      "priority": 8
+    },
+    "token_admin": {
+      "description": "Token management",
+      "color": "#8b5cf6",
+      "priority": 7
+    },
+    "validator_admin": {
+      "description": "Validator administration",
+      "color": "#06b6d4",
+      "priority": 6
+    },
+    "network_admin": {
+      "description": "Network infrastructure",
+      "color": "#10b981",
+      "priority": 5
+    },
+    "senior": {
+      "description": "Senior developer access",
+      "color": "#3b82f6",
+      "priority": 4
+    },
+    "operator": {
+      "description": "System operations",
+      "color": "#6b7280",
+      "priority": 3
+    }
+  },
+  "permissions": {
+    "blockchain_control": "Full blockchain network control",
+    "token_management": "CLI256 token minting and management",
+    "validator_control": "Add/remove validators and manage staking",
+    "emergency_functions": "Emergency stop and crisis management",
+    "system_configuration": "Network configuration and parameters",
+    "network_deployment": "Deploy updates and manage infrastructure",
+    "smart_contract_deploy": "Deploy and manage smart contracts",
+    "authority_operations": "Execute authority-level operations",
+    "mint_tokens": "Create new CLI256 tokens",
+    "freeze_accounts": "Freeze and unfreeze user accounts",
+    "update_network_config": "Modify network parameters",
+    "export_all_data": "Export blockchain and system data",
+    "emergency_stop": "Immediately halt network operations",
+    "restart_network": "Restart blockchain network",
+    "full_system_access": "Unrestricted access to all functions"
+  }
+}
